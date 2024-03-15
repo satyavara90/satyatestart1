@@ -30,7 +30,7 @@ jobs:
         with:
           name: test
           path: |
-           src
+           dist
            package.json 
 
   deploy:
@@ -43,6 +43,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: test
-          path: src
+          path: dist
       - name: Output
         run: ls -l
