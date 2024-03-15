@@ -36,7 +36,7 @@ jobs:
            package.json 
       - name: publich file name
         id: publish
-        run: find dist -type f -name "*.js" -exec echo 'script-file={}'>> $GITHUB_OUTPUT ';'
+        run: find dist -type f -name "*.js" -execdir echo "::set-output name=script-file::{}" ';'
   deploy:
     needs: build
     runs-on: ubuntu-latest
