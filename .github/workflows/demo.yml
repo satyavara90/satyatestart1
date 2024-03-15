@@ -44,3 +44,5 @@ jobs:
         with:
           name: test
           path: src
+      - name: Output
+        run: ls -l
