@@ -34,6 +34,6 @@ jobs:
       - name: upload job artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: website
-          path: src
+          name: test
+          path: test
 
